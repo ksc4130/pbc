@@ -4,13 +4,13 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Flywheels Hot Rod Club' });
+  res.render('index', { title: 'Penny Bottom Candles' });
 };
 
 exports.events = function(req, res){
-  res.render('events', { title: 'Flywheels Hot Rod Club' });
+  res.render('events', { title: 'Penny Bottom Candles' });
 };
 
 exports.gallery = function(req, res){
-  res.render('gallery', { title: 'Flywheels Hot Rod Club' });
+  res.render('gallery', { title: 'Penny Bottom Candles' });
 };

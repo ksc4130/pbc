@@ -10,7 +10,7 @@ app.configure(function(){
   app.set('port', process.env.PORT || 3009);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
-  app.use(express.favicon(path.join(__dirname, 'public/img/flywheelsFavicon3.png')));
+  app.use(express.favicon(path.join(__dirname, 'public/img/pbFav.gif')));
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
