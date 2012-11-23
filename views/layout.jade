@@ -17,7 +17,7 @@ html
               /* Custom container */
               .container-narrow {
                 margin: 0 auto;
-                max-width: 1000px;
+                max-width: 940px;
               }
               .container-narrow > hr {
                 margin: 30px 0;
@@ -55,11 +55,13 @@ html
               }
         block head
     body
-        .container-narrow
-            h3(style="margin-bottom: -35px; margin-left: 30px;")
-                img(src="/img/logo.gif", alt="Penny Bottom Candles")
+        .container
             .row
-                .span5.offset5
+                span12
+                    h3(style="margin-bottom: -35px; margin-left: 30px;")
+                        img(src="/img/logo.gif", alt="Penny Bottom Candles")
+            .row
+                .span6.offset6
                     ul.nav.nav-pills.pull-right(style="margin-bottom: -25px; margin-top: 0;")
                         li.active
                             a(href="#") Home
