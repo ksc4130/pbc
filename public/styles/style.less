@@ -1,0 +1,108 @@
+@import "./reset.less";
+@import "./mixins.less";
+
+@global_width: 1000px;
+@global_width_padded: @global_width + 100;
+
+.global_width{
+    position:  relative;
+    min-width: @global_width;
+    width: @global_width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@base: #abe7ef;
+
+//Complementary Color Scheme
+@com1: spin(@base, 180);
+@com2: darken(spin(@base, 180), 5%);
+@lighten1: lighten(@base, 15%);
+@lighten2: lighten(@base, 30%);
+//end Compementary Color Scheme 
+
+//Subtle Color Schreme
+@lighter12: lighten(spin(@base, 5), 10%);
+@lighter22: lighten(spin(@base, 10), 20%);
+@darker12: darken(spin(@base, -5), 10%);
+@darker22: darken(spin(@base, -10), 20%);
+//end Subtle Color Schreme
+/* color options
+  darken() and lighten(), which add some black or white,
+saturate() and desaturate(), to make a color more “colorful” or more “grayscale”,
+fadein() and fadeout(), to increase or reduce transparency,
+and spin(), which modifies the hue of the color.  
+*/
+
+
+.h1 {
+	font-size: 5rem;
+}
+.h2 {
+	font-size: 4rem;
+}
+.h3 {
+	font-size: 3rem;
+}
+.h4 {
+	font-size: 2rem;
+}
+.h5 {
+	font-size: .75rem;
+}
+.h6 {
+	font-size: .25rem;
+}
+
+@header_bg_color: #000;
+@header_text_color: #7c7c7c;
+
+@bg_color: #F1EBE4;
+
+@BorderColor: #3ab5e9;
+
+@FontColorBlur: rgba(255, 255, 255, .5);
+@FontColorHover: rgba(255, 255, 255, .8);
+@FontColorActive: rgba(255, 255, 255, .9);
+
+
+html {
+    .bgRepeater(url('/img/bo_play.png'), lightblue);
+    font-size: 1.7rem;
+	body {
+        img.shadow {
+            .box-shadow(0 0 25px 5px #000);//box shadow all sides
+        }
+		header {
+			position: relative;
+			.global_width;
+			.clearfix;
+            min-height: 13rem;
+            //border: 1px solid pink;
+            nav {
+                width: 900px;
+                margin-left: 100px;
+                ul {
+                    li {
+                        display: inline-block;
+                        a {
+                            text-decoration: none;
+                            color:  #808080;
+                            display: block;
+                            padding: 1rem 1.5rem;
+                        }
+                    }
+                } 
+            }
+		}//header
+		#content_wrapper {
+			.global_width;
+			width:  1000px;
+            background-color: #fff;
+            border: 1px solid #888;
+            min-height:  500px;
+            margin-top:  2rem;
+            margin-bottom: 5rem;
+		}//#content_wrapper
+	}//body
+}//html

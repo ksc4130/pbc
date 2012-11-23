@@ -1,0 +1,35 @@
+extends layout
+block head
+    style
+        .carousel img {
+            width: 99%;
+        }
+        .carousel-control {
+            background-color: transparent;
+            border: 0;
+            font-size: 100px;
+        }
+block content
+    #myCarousel.carousel.slide
+        .carousel-inner
+            .active.item
+                img.img-polaroid(style="margin-bottom: 30px;", src="/img/black-car-paper_1000x400.png")
+            .item
+                img.img-polaroid(style="margin-bottom: 30px;", src="/img/black-car-paper_1000x400.png")
+            .item
+                img.img-polaroid(style="margin-bottom: 30px;", src="/img/black-car-paper_1000x400.png")
+        a(class="carousel-control left", href="#myCarousel", data-slide="prev") &lsaquo;
+        a(class="carousel-control right", href="#myCarousel", data-slide="next") &rsaquo;
+    ul(style="list-style: none;", data-bind="foreach: albums")
+        li(style="margin-left: 10px; display: inline-block;", data-bind="click: $root.setFeatured")
+            h3.subheader(data-bind="text: name")
+            img(style="width: 200px;", data-bind="attr: { 'src': cover.src }")
+block scripts
+    script
+        $(function() {
+            console.log('ala');
+            $('#myCarousel').carousel({
+                interval: 2000
+            });
+        });
+    script(src="/scripts/viewmodels/gallery.js")
